@@ -1,9 +1,13 @@
 import React from 'react'
 import Box from './components/box'
+import { motion } from 'framer-motion'
 const Dashboard = () => {
   return (
     <>
-    <div className = "flex flex-wrap justify-center my-20">
+    <motion.div className = "flex flex-wrap justify-center my-20" id = "dashboard"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}>
       <Box title = "Times Donated" count = "2"/>
       <Box title = "Gender" count = "Male"/>
       <Box title = "Blood Group" count = "A+"/>
@@ -16,7 +20,7 @@ const Dashboard = () => {
       <Box title = "Adhar No." count = "2"/>
       <Box title = "Occupation" count = "2"/>
       <Box title = "Age" count = "2"/>
-    </div>
+    </motion.div>
     </>
   )
 }

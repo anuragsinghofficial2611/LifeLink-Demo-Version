@@ -1,9 +1,15 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Requestblood = () => {
   return (
     <>
-    <div className="text-3xl mx-20 my-5 font-semibold">
+    <motion.div className = "h-screen"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
+      <div className="text-3xl mx-20 my-5 font-semibold">
       Request Blood
       </div>
 
@@ -35,6 +41,7 @@ const Requestblood = () => {
           
         </form>
       </div>
+      </motion.div>
     </>
   )
 }

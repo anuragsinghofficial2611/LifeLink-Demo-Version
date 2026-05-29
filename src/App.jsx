@@ -7,6 +7,8 @@ import Login from './pages/login.jsx'
 import Signup from './pages/signup.jsx'
 import Dashboard from './pages/dashboard.jsx'
 import Emergency from './pages/emergency.jsx'
+import { motion } from 'framer-motion'
+import { HashLink } from 'react-router-hash-link'
 
 import Background3d from './pages/components/Background3d.jsx'
 
@@ -17,10 +19,16 @@ const App = () => {
       <BrowserRouter>
 
         <nav className="flex justify-between">
-          <div className='w-50'>
+          <motion.div className='w-50' 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView = {{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}>
             <h2 className='text-2xl font-bold my-3 mx-5'>Life<span className='text-blue-700'>Link</span></h2>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView = {{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}>
 
             <div className="flex gap-4 p-3">
               <Link className="hover:bg-gray-200 transition-all duration-200 p-2 rounded-xl" to="/">Home</Link>
@@ -32,7 +40,7 @@ const App = () => {
               <Link className="hover:bg-gray-200 transition-all duration-200 p-2 rounded-xl" to="/dashboard">Dashboard</Link>
               <Link className="hover:bg-gray-200 transition-all duration-200 p-2 rounded-xl" to="/emergency">Emergency</Link>
             </div>
-          </div>
+          </motion.div>
           
         </nav>
 
@@ -47,6 +55,14 @@ const App = () => {
         </Routes>
 
       </BrowserRouter>
+      <section>
+        <div>
+          <DonateBlood />
+          <RequestBlood />
+          <Emergency />
+          <Dashboard />
+        </div>
+      </section>
     </div>
   )
 }
