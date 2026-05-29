@@ -5,6 +5,7 @@ import DonateBlood from './donateblood.jsx'
 import RequestBlood from './requestblood.jsx'
 import Dashboard from './dashboard.jsx'
 import Emergency from './emergency.jsx'
+import { HashLink } from 'react-router-hash-link'
 
 const Home = () => {
   return (
@@ -28,8 +29,8 @@ const Home = () => {
             viewport={{ amount: 0.5 }}
             transition={{ duration: 1 }}
           >
-            <Link to="/donorblood" className=" mx-10 bg-blue-500 text-white py-4 px-7 rounded-2xl hover:bg-white hover:text-blue-900 text-2xl transition-all duration-200 hover:border-1">Donate Blood</Link>
-            <Link to="/requestblood" className="mx-10 bg-blue-500 text-white py-4 px-7 rounded-2xl hover:bg-white hover:text-blue-900 text-2xl transition-all duration-200 hover:border-1">Request  Blood</Link>
+            <HashLink to="/#donateblood" className=" mx-10 bg-blue-500 text-white py-4 px-7 rounded-2xl hover:bg-white hover:text-blue-900 text-2xl transition-all duration-200 hover:border-1">Donate Blood</HashLink>
+            <HashLink to="/#requestblood" className="mx-10 bg-blue-500 text-white py-4 px-7 rounded-2xl hover:bg-white hover:text-blue-900 text-2xl transition-all duration-200 hover:border-1">Request  Blood</HashLink>
           </motion.div>
         </div>
         <section id="donateblood">
