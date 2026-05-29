@@ -3,9 +3,10 @@ import { motion } from 'framer-motion'
 const Emergency = () => {
   return (
     <>
-      <motion.div className = "h-screen"
+      <motion.div className = "h-screen" id = "emergency"
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0}}
+        viewport={{ amount: 0.5 }}
         transition={{ duration: 1 }}>
 
         <div className="text-3xl mx-20 my-5 font-semibold">

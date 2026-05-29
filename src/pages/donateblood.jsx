@@ -4,9 +4,10 @@ import { motion } from 'framer-motion'
 const Donateblood = () => {
   return (
     <>
-      <motion.div
+      <motion.div id = "donateblood" className = "h-screen"
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0}}
+        viewport={{ amount: 0.5 }}
         transition={{ duration: 1 }}>
         <div className="mx-20 my-10">
 
